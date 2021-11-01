@@ -16,3 +16,9 @@ def test_version():
 )
 def test_get_citations_needed_count(url, count):
     assert get_citations_needed_count(url) == count
+
+def test_get_citations_needed_report():
+    url = "https://en.wikipedia.org/wiki/Quantum_mechanics"
+    expected  = ""
+    actual = get_citations_needed_report(url)
+    assert actual == expected
